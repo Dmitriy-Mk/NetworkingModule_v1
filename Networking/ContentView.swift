@@ -17,7 +17,13 @@ struct ContentView: View {
             if let error = viewModel.errorMessage {
                 Text("\(error)")
             } else {
-                Text("\(viewModel.coin), \(viewModel.price)")
+                
+                List {
+                    ForEach(viewModel.coinsList) { coin in
+                        Text("\(coin.name)")
+                    }
+                }
+                .background(Color.clear)
             }
         }
         .padding()

@@ -14,6 +14,7 @@ final class CoinsViewModel: ObservableObject {
     @Published var coin = ""
     @Published var price = ""
     @Published var errorMessage: String?
+    @Published var coinsList: [CoinModel] = []
     
     private let coinDataService = CoinDataService()
     
@@ -22,8 +23,16 @@ final class CoinsViewModel: ObservableObject {
     }
     
     func fetchCoins() {
-        coinDataService.fetchCoinsList { result in
-            print(result)
+        coinDataService.fetchCoinsList { [ weak self ] result in
+            
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let success):
+                self.coinsList = success
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
         }
     }
     
