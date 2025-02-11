@@ -22,7 +22,9 @@ final class CoinsViewModel: ObservableObject {
     }
     
     func fetchCoins() {
-        coinDataService.fetchCoinsList()
+        coinDataService.fetchCoinsList { result in
+            print(result)
+        }
     }
     
     func fetchCoins(coin: String) {

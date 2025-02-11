@@ -11,7 +11,7 @@ final class CoinDataService {
     
     let cURL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=3&page=1&sparkline=false&price_change_percentage=24h&locale=en"
     
-    func fetchCoinsList() {
+    func fetchCoinsList(_ completion: @escaping (Result<[CoinModel], Error>) -> Void) {
         
         guard let url = URL(string: cURL) else { return }
         
@@ -29,10 +29,16 @@ final class CoinDataService {
                 print("Failed to fetch data, HTTP status code: \(httpResponse.statusCode)")
                 return
             }
-            guard let data = data,
-                  let stringData = String(data: data, encoding: .utf8)
-            else { return }
-            print("Coins Data:", stringData)
+            guard let data = data else { return }
+            
+            do {
+                let coinsList = try JSONDecoder().decode([CoinModel].self, from: data)
+                print(coinsList)
+                completion(.success(coinsList))
+            } catch {
+                completion(.failure(error))
+                print("Error parsing JSON with Data: \(data), with error: ", error.localizedDescription)
+            }
         }.resume()
     }
     
