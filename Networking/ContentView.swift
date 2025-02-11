@@ -14,10 +14,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            if viewModel.errorMessage.isEmpty {
-                Text("\(viewModel.coin), \(viewModel.price)")
+            if let error = viewModel.errorMessage {
+                Text("\(error)")
             } else {
-                Text("\(viewModel.errorMessage)")
+                Text("\(viewModel.coin), \(viewModel.price)")
             }
         }
         .padding()
