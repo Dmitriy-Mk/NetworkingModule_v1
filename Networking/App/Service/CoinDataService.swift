@@ -9,7 +9,34 @@ import Foundation
 
 final class CoinDataService {
     
-    func fetchCoins(coin: String,  completion: @escaping (Double) -> Void) {
+    let cURL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=3&page=1&sparkline=false&price_change_percentage=24h&locale=en"
+    
+    func fetchCoinsList() {
+        
+        guard let url = URL(string: cURL) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Bad HTTP response")
+                return
+            }
+            guard httpResponse.statusCode == 200 else {
+                print("Failed to fetch data, HTTP status code: \(httpResponse.statusCode)")
+                return
+            }
+            guard let data = data,
+                  let stringData = String(data: data, encoding: .utf8)
+            else { return }
+            print("Coins Data:", stringData)
+        }.resume()
+    }
+    
+    func fetchCoin(coin: String,  completion: @escaping (Double) -> Void) {
         
         let urlString = "https://api.coingecko.com/api/v3/simple/price?ids=\(coin)&vs_currencies=usd"
         guard let url = URL(string: urlString) else { return }
@@ -17,18 +44,18 @@ final class CoinDataService {
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let error = error {
-//                self.errorMessage = error.localizedDescription
+                //                self.errorMessage = error.localizedDescription
                 print("Error: \(error.localizedDescription)")
             }
             
             guard let httpResponse = response as? HTTPURLResponse else {
-//                self.errorMessage = "DEBUG: Bad HTTP response"
+                //                self.errorMessage = "DEBUG: Bad HTTP response"
                 print("DEBUG: Bad HTTP response")
                 return
             }
             
             guard httpResponse.statusCode == 200 else {
-//                self.errorMessage = "Failed to fetch with status code \(httpResponse.statusCode)"
+                //                self.errorMessage = "Failed to fetch with status code \(httpResponse.statusCode)"
                 return
             }
             
