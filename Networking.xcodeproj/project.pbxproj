@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BEFDACA02D5B5D9700F540BD /* NetworkingMasterclass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingMasterclass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFDACA02D5B5D9700F540BD /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BEFDACA22D5B5D9700F540BD /* NetworkingMasterclass */ = {
+		BEFDACA22D5B5D9700F540BD /* Networking */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NetworkingMasterclass;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		BEFDAC972D5B5D9700F540BD = {
 			isa = PBXGroup;
 			children = (
-				BEFDACA22D5B5D9700F540BD /* NetworkingMasterclass */,
+				BEFDACA22D5B5D9700F540BD /* Networking */,
 				BEFDACA12D5B5D9700F540BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		BEFDACA12D5B5D9700F540BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEFDACA02D5B5D9700F540BD /* NetworkingMasterclass.app */,
+				BEFDACA02D5B5D9700F540BD /* Networking.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEFDAC9F2D5B5D9700F540BD /* NetworkingMasterclass */ = {
+		BEFDAC9F2D5B5D9700F540BD /* Networking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "NetworkingMasterclass" */;
+			buildConfigurationList = BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
 				BEFDAC9C2D5B5D9700F540BD /* Sources */,
 				BEFDAC9D2D5B5D9700F540BD /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BEFDACA22D5B5D9700F540BD /* NetworkingMasterclass */,
+				BEFDACA22D5B5D9700F540BD /* Networking */,
 			);
-			name = NetworkingMasterclass;
+			name = Networking;
 			packageProductDependencies = (
 			);
 			productName = NetworkingMasterclass;
-			productReference = BEFDACA02D5B5D9700F540BD /* NetworkingMasterclass.app */;
+			productReference = BEFDACA02D5B5D9700F540BD /* Networking.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "NetworkingMasterclass" */;
+			buildConfigurationList = BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "Networking" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEFDAC9F2D5B5D9700F540BD /* NetworkingMasterclass */,
+				BEFDAC9F2D5B5D9700F540BD /* Networking */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +251,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NetworkingMasterclass/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Networking/Preview Content\"";
 				DEVELOPMENT_TEAM = 89SPL377XV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +280,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NetworkingMasterclass/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Networking/Preview Content\"";
 				DEVELOPMENT_TEAM = 89SPL377XV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "NetworkingMasterclass" */ = {
+		BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEFDACAC2D5B5D9800F540BD /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "NetworkingMasterclass" */ = {
+		BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEFDACAF2D5B5D9800F540BD /* Debug */,

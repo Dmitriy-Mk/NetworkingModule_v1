@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let viewModel = CoinsViewModel()
+    @ObservedObject var viewModel = CoinsViewModel()
     
     var body: some View {
         VStack {
-            Text("Hello, world!")
             
+            if viewModel.errorMessage.isEmpty {
+                Text("\(viewModel.coin), \(viewModel.price)")
+            } else {
+                Text("\(viewModel.errorMessage)")
+            }
         }
         .padding()
     }
