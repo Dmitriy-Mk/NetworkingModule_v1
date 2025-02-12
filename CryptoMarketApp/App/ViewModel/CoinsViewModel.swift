@@ -32,6 +32,7 @@ final class CoinsViewModel: ObservableObject {
                 case .success(let success):
                     self.coinsList = success
                 case .failure(let failure):
+                    self.errorMessage = failure.localizedDescription
                     print(failure.localizedDescription)
                 }
             }
