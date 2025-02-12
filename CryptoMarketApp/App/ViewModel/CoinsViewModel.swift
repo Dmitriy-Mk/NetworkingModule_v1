@@ -37,13 +37,4 @@ final class CoinsViewModel: ObservableObject {
             }
         }
     }
-    
-    func fetchCoins(coin: String) {
-        coinDataService.fetchCoin(coin: coin) { coinPrice in
-            DispatchQueue.main.async {
-                self.coin = coin
-                self.price = "$\(coinPrice)"
-            }
-        }
-    }
 }

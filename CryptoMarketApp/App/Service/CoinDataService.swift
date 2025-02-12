@@ -13,6 +13,8 @@ final class CoinDataService {
     
     let cURL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=3&page=1&sparkline=false&price_change_percentage=24h&locale=en"
     
+//    func
+    
     func fetchCoinsList(_ completion: @escaping (Result<[CoinModel], CoinAPIError>) -> Void) {
         
         guard let url = URL(string: cURL) else { return }
