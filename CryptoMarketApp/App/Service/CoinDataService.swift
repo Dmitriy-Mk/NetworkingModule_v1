@@ -13,7 +13,18 @@ final class CoinDataService {
     
     let cURL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=3&page=1&sparkline=false&price_change_percentage=24h&locale=en"
     
-//    func
+    func fetchCoinsList() async throws -> [CoinModel] {
+        
+        do {
+            guard let url = URL(string: cURL) else { return [] }
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let decodedData = try JSONDecoder().decode([CoinModel].self, from: data)
+            return decodedData
+        } catch {
+            print("Failed request: ", error.localizedDescription)
+            return []
+        }
+    }
     
     func fetchCoinsList(_ completion: @escaping (Result<[CoinModel], CoinAPIError>) -> Void) {
         
@@ -24,7 +35,6 @@ final class CoinDataService {
             if let error = error {
                 completion(.failure(.requestFailed(description: error.localizedDescription)))
             }
-            
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.requestFailed(description: "No HTTP Response")))
                 return
