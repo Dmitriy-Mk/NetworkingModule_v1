@@ -20,7 +20,18 @@ struct ContentView: View {
                 
                 List {
                     ForEach(viewModel.coinsList) { coin in
-                        Text("\(coin.name)")
+                        HStack(spacing: 15) {
+                            Text("\(coin.marketCapRank)")
+                                .foregroundColor(.gray)
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("\(coin.name)")
+                                    .fontWeight(.semibold)
+                                
+                                Text("\(coin.symbol)")
+                            }
+                        }
+                        .font(.footnote)
                     }
                 }
                 .background(Color.clear)

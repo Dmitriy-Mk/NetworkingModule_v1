@@ -25,13 +25,15 @@ final class CoinsViewModel: ObservableObject {
     func fetchCoins() {
         coinDataService.fetchCoinsList { [ weak self ] result in
             
-            guard let self = self else { return }
-            
-            switch result {
-            case .success(let success):
-                self.coinsList = success
-            case .failure(let failure):
-                print(failure.localizedDescription)
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                
+                switch result {
+                case .success(let success):
+                    self.coinsList = success
+                case .failure(let failure):
+                    print(failure.localizedDescription)
+                }
             }
         }
     }

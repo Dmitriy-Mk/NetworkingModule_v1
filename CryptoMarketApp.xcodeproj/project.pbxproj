@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BEFDACA02D5B5D9700F540BD /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFDACA02D5B5D9700F540BD /* CryptoMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BEFDACA22D5B5D9700F540BD /* Networking */ = {
+		BEFDACA22D5B5D9700F540BD /* CryptoMarketApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Networking;
+			path = CryptoMarketApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		BEFDAC972D5B5D9700F540BD = {
 			isa = PBXGroup;
 			children = (
-				BEFDACA22D5B5D9700F540BD /* Networking */,
+				BEFDACA22D5B5D9700F540BD /* CryptoMarketApp */,
 				BEFDACA12D5B5D9700F540BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		BEFDACA12D5B5D9700F540BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEFDACA02D5B5D9700F540BD /* Networking.app */,
+				BEFDACA02D5B5D9700F540BD /* CryptoMarketApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEFDAC9F2D5B5D9700F540BD /* Networking */ = {
+		BEFDAC9F2D5B5D9700F540BD /* CryptoMarketApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildConfigurationList = BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "CryptoMarketApp" */;
 			buildPhases = (
 				BEFDAC9C2D5B5D9700F540BD /* Sources */,
 				BEFDAC9D2D5B5D9700F540BD /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BEFDACA22D5B5D9700F540BD /* Networking */,
+				BEFDACA22D5B5D9700F540BD /* CryptoMarketApp */,
 			);
-			name = Networking;
+			name = CryptoMarketApp;
 			packageProductDependencies = (
 			);
 			productName = NetworkingMasterclass;
-			productReference = BEFDACA02D5B5D9700F540BD /* Networking.app */;
+			productReference = BEFDACA02D5B5D9700F540BD /* CryptoMarketApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "Networking" */;
+			buildConfigurationList = BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "CryptoMarketApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEFDAC9F2D5B5D9700F540BD /* Networking */,
+				BEFDAC9F2D5B5D9700F540BD /* CryptoMarketApp */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +251,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Networking/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoMarketApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 89SPL377XV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +280,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Networking/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoMarketApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 89SPL377XV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "Networking" */ = {
+		BEFDAC9B2D5B5D9700F540BD /* Build configuration list for PBXProject "CryptoMarketApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEFDACAC2D5B5D9800F540BD /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "Networking" */ = {
+		BEFDACAE2D5B5D9800F540BD /* Build configuration list for PBXNativeTarget "CryptoMarketApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEFDACAF2D5B5D9800F540BD /* Debug */,
